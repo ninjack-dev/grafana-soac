@@ -1,0 +1,2322 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": {
+          "type": "grafana",
+          "uid": "-- Grafana --"
+        },
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 0,
+  "id": 1,
+  "links": [],
+  "liveNow": false,
+  "panels": [
+    {
+      "datasource": {
+        "type": "grafana-mongodb-opensource-datasource",
+        "uid": "a9ca6408-ff14-4fbc-b061-795f3dd6217f"
+      },
+      "gridPos": {
+        "h": 6,
+        "w": 7,
+        "x": 0,
+        "y": 0
+      },
+      "id": 31,
+      "options": {
+        "code": {
+          "language": "typescript",
+          "showLineNumbers": false,
+          "showMiniMap": false
+        },
+        "content": "<img src=\"http://ec2-44-229-131-224.us-west-2.compute.amazonaws.com:8080/UI_Sandpoint_Organic_Ag_Center.png\" width=\"100%\">",
+        "mode": "html"
+      },
+      "pluginVersion": "9.5.2",
+      "title": " ",
+      "transparent": true,
+      "type": "text"
+    },
+    {
+      "datasource": {
+        "type": "grafana-mongodb-opensource-datasource",
+        "uid": "a9ca6408-ff14-4fbc-b061-795f3dd6217f"
+      },
+      "gridPos": {
+        "h": 12,
+        "w": 8,
+        "x": 7,
+        "y": 0
+      },
+      "id": 30,
+      "options": {
+        "code": {
+          "language": "typescript",
+          "showLineNumbers": false,
+          "showMiniMap": false
+        },
+        "content": "<img src=\"http://ec2-44-229-131-224.us-west-2.compute.amazonaws.com:8080/gateway.jpg\" width=\"100%\">\r\n",
+        "mode": "html"
+      },
+      "pluginVersion": "9.5.2",
+      "title": "Orchard Images",
+      "type": "text"
+    },
+    {
+      "datasource": {
+        "type": "grafana-mongodb-opensource-datasource",
+        "uid": "a9ca6408-ff14-4fbc-b061-795f3dd6217f"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "custom": {
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 7,
+        "w": 7,
+        "x": 15,
+        "y": 0
+      },
+      "id": 27,
+      "options": {
+        "basemap": {
+          "config": {
+            "server": "world-imagery"
+          },
+          "name": "Layer 0",
+          "opacity": 1,
+          "type": "esri-xyz"
+        },
+        "controls": {
+          "mouseWheelZoom": true,
+          "showAttribution": true,
+          "showDebug": false,
+          "showMeasure": false,
+          "showScale": true,
+          "showZoom": true
+        },
+        "layers": [
+          {
+            "config": {
+              "showLegend": false,
+              "style": {
+                "color": {
+                  "fixed": "orange"
+                },
+                "opacity": 1,
+                "rotation": {
+                  "fixed": 0,
+                  "max": 360,
+                  "min": -360,
+                  "mode": "mod"
+                },
+                "size": {
+                  "fixed": 5,
+                  "max": 15,
+                  "min": 2
+                },
+                "symbol": {
+                  "fixed": "img/icons/marker/star.svg",
+                  "mode": "fixed"
+                },
+                "text": {
+                  "field": "",
+                  "fixed": "",
+                  "mode": "fixed"
+                },
+                "textConfig": {
+                  "fontSize": 12,
+                  "offsetX": 0,
+                  "offsetY": 0,
+                  "textAlign": "center",
+                  "textBaseline": "middle"
+                }
+              }
+            },
+            "location": {
+              "mode": "auto"
+            },
+            "name": "WeatherRack",
+            "tooltip": true,
+            "type": "markers"
+          }
+        ],
+        "tooltip": {
+          "mode": "details"
+        },
+        "view": {
+          "allLayers": true,
+          "id": "fit",
+          "lastOnly": false,
+          "lat": 48.3207733,
+          "layer": "Layer 1",
+          "lon": -116.55547805555555,
+          "zoom": 17
+        }
+      },
+      "pluginVersion": "9.5.2",
+      "targets": [
+        {
+          "datasource": {
+            "type": "grafana-mongodb-opensource-datasource",
+            "uid": "a9ca6408-ff14-4fbc-b061-795f3dd6217f"
+          },
+          "rawQuery": true,
+          "refId": "A",
+          "target": "db.renogy_solar_charger_instances.aggregate(\n[]\n)",
+          "type": "timeserie"
+        }
+      ],
+      "title": "Gateway Location",
+      "type": "geomap"
+    },
+    {
+      "datasource": {
+        "type": "grafana-mongodb-opensource-datasource",
+        "uid": "a9ca6408-ff14-4fbc-b061-795f3dd6217f"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 0
+              },
+              {
+                "color": "#EAB839",
+                "value": 30
+              },
+              {
+                "color": "green",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "percent"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 2,
+        "x": 22,
+        "y": 0
+      },
+      "id": 28,
+      "options": {
+        "colorMode": "background_solid",
+        "graphMode": "none",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "firstNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "9.5.2",
+      "targets": [
+        {
+          "datasource": {
+            "type": "grafana-mongodb-opensource-datasource",
+            "uid": "a9ca6408-ff14-4fbc-b061-795f3dd6217f"
+          },
+          "rawQuery": true,
+          "refId": "A",
+          "target": "db.renogy_solar_charger.aggregate(\n    [\n        {\n            \"$group\": {\n                \"_id\": \"$time\",\n                \"batt\": {\n                    \"$avg\":\"$battery_percentage\"\n                },\n                \"time\": {\n                    \"$first\": \"$time\"\n                }\n            }\n        },\n        {\n            // Transform 'time' from a string to a date\n            \"$addFields\": {\n                \"time\": {\n                    \"$dateFromString\": {\n                        \"dateString\": \"$time\"\n                    }\n                }\n            }\n        },\n        {\n            \"$match\": {\n                \"time\": {\n                    \"$gte\": new Date(\"${__from:date:iso}\"),\n                    \"$lte\": new Date(\"${__to:date:iso}\")\n                }\n            }\n        },\n        {\n            \"$sort\": {\n                \"time\": -1\n            }\n        },\n        \n        // Project the fields we want to keep\n        {\n            \"$project\": {\n                \"_id\": 0,\n                \"time\": 1,\n                \"batt\": \"$batt\"\n            }\n        }\n    ]\n    )",
+          "type": "timeserie"
+        }
+      ],
+      "title": "Battery",
+      "transparent": true,
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "grafana-mongodb-opensource-datasource",
+        "uid": "${DataSource}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [
+            {
+              "options": {
+                "0": {
+                  "color": "red",
+                  "index": 0,
+                  "text": "not charging"
+                },
+                "1": {
+                  "color": "light-yellow",
+                  "index": 1,
+                  "text": "charging"
+                },
+                "2": {
+                  "color": "green",
+                  "index": 2,
+                  "text": "charging"
+                }
+              },
+              "type": "value"
+            }
+          ],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              }
+            ]
+          },
+          "unit": "string"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 2,
+        "x": 22,
+        "y": 5
+      },
+      "id": 29,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "none",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "firstNotNull"
+          ],
+          "fields": "/^batterylow$/",
+          "values": false
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "9.5.2",
+      "targets": [
+        {
+          "datasource": {
+            "type": "grafana-mongodb-opensource-datasource",
+            "uid": "${DataSource}"
+          },
+          "rawQuery": true,
+          "refId": "A",
+          "target": "db.renogy_solar_charger.aggregate(\n[\n    {\n        // Convert the timestamp to a date object\n        \"$set\": {\n            \"timestamp\": {\n                \"$toDate\": \"$timestamp\"\n            }\n        }\n    },\n    {\n        $project: {\n            _id: 0,\n            timestamp: 1,\n            batterylow: { // Possible values: deactivated, floating, boost\n                // Need to map to 0, 1, 2\n                $cond: {\n                    if: { $eq: [\"$batterylow\", \"deactivated\"] },\n                    then: 0,\n                    else: {\n                        $cond: {\n                            if: { $eq: [\"$batterylow\", \"floating\"] },\n                            then: 1,\n                            else: 2\n                        }\n                    }\n                }\n            }\n        }\n    }\n]\n)",
+          "type": "timeserie"
+        }
+      ],
+      "title": "Status",
+      "transparent": true,
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "grafana-mongodb-opensource-datasource",
+        "uid": "${DataSource}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "__systemRef": "hideSeriesFrom",
+            "matcher": {
+              "id": "byNames",
+              "options": {
+                "mode": "exclude",
+                "names": [
+                  "avewindspeed"
+                ],
+                "prefix": "All except:",
+                "readOnly": true
+              }
+            },
+            "properties": [
+              {
+                "id": "custom.hideFrom",
+                "value": {
+                  "legend": false,
+                  "tooltip": false,
+                  "viz": true
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 6,
+        "w": 7,
+        "x": 0,
+        "y": 6
+      },
+      "id": 5,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "right",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "targets": [
+        {
+          "datasource": {
+            "type": "grafana-mongodb-opensource-datasource",
+            "uid": "${DataSource}"
+          },
+          "rawQuery": true,
+          "refId": "A",
+          "target": "db.weather_rack.aggregate(\n[\n    {\n        \"$match\": {\n            \"device\": 12,\n        }\n    },\n    {\n        // Transform 'time' from a string to a date\n        \"$addFields\": {\n            \"time\": {\n                \"$dateFromString\": {\n                    \"dateString\": \"$time\"\n                }\n            }\n        }\n    },\n    {\n        \"$match\": {\n            \"time\": {\n                \"$gte\": new Date(\"${__from:date:iso}\"),\n                \"$lte\": new Date(\"${__to:date:iso}\")\n            }\n        }\n    },\n    {\n        \"$sort\": {\n            \"time\": -1\n        }\n    },\n    \n]\n)",
+          "type": "timeserie"
+        }
+      ],
+      "title": "All Weather Rack Data Points",
+      "transparent": true,
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "grafana-mongodb-opensource-datasource",
+        "uid": "a9ca6408-ff14-4fbc-b061-795f3dd6217f"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "#EAB839",
+                "value": 98.6
+              }
+            ]
+          },
+          "unit": "fahrenheit"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 3,
+        "x": 15,
+        "y": 7
+      },
+      "id": 23,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "firstNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "9.5.2",
+      "targets": [
+        {
+          "datasource": {
+            "type": "grafana-mongodb-opensource-datasource",
+            "uid": "a9ca6408-ff14-4fbc-b061-795f3dd6217f"
+          },
+          "rawQuery": true,
+          "refId": "A",
+          "target": "db.gateway_stats.aggregate(\n        [\n            {\n                \"$group\": {\n                    \"_id\": \"$time\",\n                    \"temp\": {\n                        \"$avg\":\"$internal_temp\"\n                    },\n                    \"time\": {\n                        \"$first\": \"$time\"\n                    }\n                }\n            },\n            {\n                // Transform 'time' from a string to a date\n                \"$addFields\": {\n                    \"time\": {\n                        \"$dateFromString\": {\n                            \"dateString\": \"$time\"\n                        }\n                    }\n                }\n            },\n            {\n                \"$match\": {\n                    \"time\": {\n                        \"$gte\": new Date(\"${__from:date:iso}\"),\n                        \"$lte\": new Date(\"${__to:date:iso}\")\n                    }\n                }\n            },\n            {\n                \"$sort\": {\n                    \"time\": -1\n                }\n            },\n            {\n                \"$addFields\": {\n                \"temperatureF\": {\n                    \"$add\": [\n                      { \"$multiply\": [ \"$temp\", 9/5 ] },\n                      32\n                    ]\n                  }\n                }\n            },\n            // Project the fields we want to keep\n            {\n                \"$project\": {\n                    \"_id\": 0,\n                    \"time\": 1,\n                    \"temperatureF\": \"$temperatureF\"\n                }\n            }\n        ]\n        )",
+          "type": "timeserie"
+        }
+      ],
+      "title": "Internal Pi (F)",
+      "transparent": true,
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "grafana-mongodb-opensource-datasource",
+        "uid": "a9ca6408-ff14-4fbc-b061-795f3dd6217f"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "#EAB839",
+                "value": 37
+              }
+            ]
+          },
+          "unit": "celsius"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 3,
+        "x": 18,
+        "y": 7
+      },
+      "id": 19,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "firstNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "9.5.2",
+      "targets": [
+        {
+          "datasource": {
+            "type": "grafana-mongodb-opensource-datasource",
+            "uid": "a9ca6408-ff14-4fbc-b061-795f3dd6217f"
+          },
+          "rawQuery": true,
+          "refId": "A",
+          "target": "db.gateway_stats.aggregate(\n    [\n        {\n            \"$group\": {\n                \"_id\": \"$time\",\n                \"temp\": {\n                    \"$avg\":\"$internal_temp\"\n                },\n                \"time\": {\n                    \"$first\": \"$time\"\n                }\n            }\n        },\n        {\n            // Transform 'time' from a string to a date\n            \"$addFields\": {\n                \"time\": {\n                    \"$dateFromString\": {\n                        \"dateString\": \"$time\"\n                    }\n                }\n            }\n        },\n        {\n            \"$match\": {\n                \"time\": {\n                    \"$gte\": new Date(\"${__from:date:iso}\"),\n                    \"$lte\": new Date(\"${__to:date:iso}\")\n                }\n            }\n        },\n        {\n            \"$sort\": {\n                \"time\": -1\n            }\n        },\n        \n        // Project the fields we want to keep\n        {\n            \"$project\": {\n                \"_id\": 0,\n                \"time\": 1,\n                \"temp\": \"$temp\"\n            }\n        }\n    ]\n    )",
+          "type": "timeserie"
+        }
+      ],
+      "title": "Internal Pi (C)",
+      "transparent": true,
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "grafana-mongodb-opensource-datasource",
+        "uid": "a9ca6408-ff14-4fbc-b061-795f3dd6217f"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [
+            {
+              "options": {
+                "from": -50,
+                "result": {
+                  "color": "text",
+                  "index": 0,
+                  "text": "OFF"
+                },
+                "to": 34
+              },
+              "type": "range"
+            },
+            {
+              "options": {
+                "from": 37,
+                "result": {
+                  "color": "text",
+                  "index": 1,
+                  "text": "ON"
+                },
+                "to": 150
+              },
+              "type": "range"
+            }
+          ],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 3,
+        "x": 21,
+        "y": 7
+      },
+      "id": 24,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "none",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "firstNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "9.5.2",
+      "targets": [
+        {
+          "datasource": {
+            "type": "grafana-mongodb-opensource-datasource",
+            "uid": "a9ca6408-ff14-4fbc-b061-795f3dd6217f"
+          },
+          "rawQuery": true,
+          "refId": "A",
+          "target": "db.gateway_stats.aggregate(\n    [\n        {\n            \"$group\": {\n                \"_id\": \"$time\",\n                \"temp\": {\n                    \"$avg\":\"$internal_temp\"\n                },\n                \"time\": {\n                    \"$first\": \"$time\"\n                }\n            }\n        },\n        {\n            // Transform 'time' from a string to a date\n            \"$addFields\": {\n                \"time\": {\n                    \"$dateFromString\": {\n                        \"dateString\": \"$time\"\n                    }\n                }\n            }\n        },\n        {\n            \"$match\": {\n                \"time\": {\n                    \"$gte\": new Date(\"${__from:date:iso}\"),\n                    \"$lte\": new Date(\"${__to:date:iso}\")\n                }\n            }\n        },\n        {\n            \"$sort\": {\n                \"time\": -1\n            }\n        },\n        \n        // Project the fields we want to keep\n        {\n            \"$project\": {\n                \"_id\": 0,\n                \"time\": 1,\n                \"temp\": \"$temp\"\n            }\n        }\n    ]\n    )",
+          "type": "timeserie"
+        }
+      ],
+      "title": "Internal Fans",
+      "transparent": true,
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "grafana-mongodb-opensource-datasource",
+        "uid": "a9ca6408-ff14-4fbc-b061-795f3dd6217f"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "continuous-GrYlRd"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              }
+            ]
+          },
+          "unit": "percent"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 3,
+        "x": 15,
+        "y": 10
+      },
+      "id": 22,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "none",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "firstNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "9.5.2",
+      "targets": [
+        {
+          "datasource": {
+            "type": "grafana-mongodb-opensource-datasource",
+            "uid": "a9ca6408-ff14-4fbc-b061-795f3dd6217f"
+          },
+          "rawQuery": true,
+          "refId": "A",
+          "target": "db.gateway_stats.aggregate(\n    [\n        {\n            \"$group\": {\n                \"_id\": \"$time\",\n                \"mem\": {\n                    \"$avg\":\"$memory_free\"\n                },\n                \"time\": {\n                    \"$first\": \"$time\"\n                }\n            }\n        },\n        {\n            // Transform 'time' from a string to a date\n            \"$addFields\": {\n                \"time\": {\n                    \"$dateFromString\": {\n                        \"dateString\": \"$time\"\n                    }\n                }\n            }\n        },\n        {\n            \"$match\": {\n                \"time\": {\n                    \"$gte\": new Date(\"${__from:date:iso}\"),\n                    \"$lte\": new Date(\"${__to:date:iso}\")\n                }\n            }\n        },\n        {\n            \"$sort\": {\n                \"time\": -1\n            }\n        },\n        // Project the fields we want to keep\n        {\n            \"$project\": {\n                \"_id\": 0,\n                \"time\": 1,\n                \"mem\": 1,\n            }\n        }\n    ]\n    )",
+          "type": "timeserie"
+        }
+      ],
+      "title": "Available Memory",
+      "transparent": true,
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "grafana-mongodb-opensource-datasource",
+        "uid": "a9ca6408-ff14-4fbc-b061-795f3dd6217f"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "continuous-GrYlRd"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "percentage",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              }
+            ]
+          },
+          "unit": "percent"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 3,
+        "x": 18,
+        "y": 10
+      },
+      "id": 20,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "none",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "firstNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "9.5.2",
+      "targets": [
+        {
+          "datasource": {
+            "type": "grafana-mongodb-opensource-datasource",
+            "uid": "a9ca6408-ff14-4fbc-b061-795f3dd6217f"
+          },
+          "rawQuery": true,
+          "refId": "A",
+          "target": "db.gateway_stats.aggregate(\n    [\n        {\n            \"$group\": {\n                \"_id\": \"$time\",\n                \"cpu\": {\n                    \"$avg\":\"$cpu_usage\"\n                },\n                \"time\": {\n                    \"$first\": \"$time\"\n                }\n            }\n        },\n        {\n            // Transform 'time' from a string to a date\n            \"$addFields\": {\n                \"time\": {\n                    \"$dateFromString\": {\n                        \"dateString\": \"$time\"\n                    }\n                }\n            }\n        },\n        {\n            \"$match\": {\n                \"time\": {\n                    \"$gte\": new Date(\"${__from:date:iso}\"),\n                    \"$lte\": new Date(\"${__to:date:iso}\")\n                }\n            }\n        },\n        {\n            \"$sort\": {\n                \"time\": -1\n            }\n        },\n        \n        // Project the fields we want to keep\n        {\n            \"$project\": {\n                \"_id\": 0,\n                \"time\": 1,\n                \"cpu\": \"$cpu\"\n            }\n        }\n    ]\n    )",
+          "type": "timeserie"
+        }
+      ],
+      "title": "CPU Usage",
+      "transparent": true,
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "grafana-mongodb-opensource-datasource",
+        "uid": "${DataSource}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "decimals": 4,
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "super-light-blue",
+                "value": null
+              }
+            ]
+          },
+          "unit": "percent"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 3,
+        "x": 21,
+        "y": 10
+      },
+      "id": 39,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "firstNotNull"
+          ],
+          "fields": "/^VWC$/",
+          "values": false
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "9.5.2",
+      "targets": [
+        {
+          "datasource": {
+            "type": "grafana-mongodb-opensource-datasource",
+            "uid": "${DataSource}"
+          },
+          "rawQuery": true,
+          "refId": "A",
+          "target": "db.meter_teros10.aggregate(\n    [\n        {\n            // Transform 'time' from a string to a date\n            \"$addFields\": {\n                \"time\": {\n                    \"$dateFromString\": {\n                        \"dateString\": \"$time\"\n                    }\n                }\n            }\n        },\n        {\n            \"$match\": {\n                \"time\": {\n                    \"$gte\": new Date(\"${__from:date:iso}\"),\n                    \"$lte\": new Date(\"${__to:date:iso}\")\n                }\n            }\n        },\n        {\n            \"$sort\": {\n                \"time\": -1\n            }\n        },\n        // Project the fields we want to keep\n        {\n            \"$project\": {\n                \"_id\": \"$time\",\n                \"VWC\": 1,\n                \"VWC_RAW\":1,\n            }\n        }\n    ]\n    )",
+          "type": "timeserie"
+        }
+      ],
+      "title": " Soil Volumetric Water Content",
+      "type": "stat"
+    },
+    {
+      "collapsed": false,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 12
+      },
+      "id": 3,
+      "panels": [],
+      "repeat": "target",
+      "repeatDirection": "h",
+      "title": "Weather Data for $target",
+      "type": "row"
+    },
+    {
+      "datasource": {
+        "type": "grafana-mongodb-opensource-datasource",
+        "uid": "${DataSource}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "decimals": 0,
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "semi-dark-purple",
+                "value": 40
+              },
+              {
+                "color": "#1F78C1",
+                "value": 50
+              },
+              {
+                "color": "semi-dark-green",
+                "value": 60
+              },
+              {
+                "color": "#EAB839",
+                "value": 70
+              },
+              {
+                "color": "#EF843C",
+                "value": 80
+              },
+              {
+                "color": "red",
+                "value": 90
+              },
+              {
+                "color": "dark-red",
+                "value": 100
+              }
+            ]
+          },
+          "unit": "fahrenheit"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 3,
+        "x": 0,
+        "y": 13
+      },
+      "id": 6,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "firstNotNull"
+          ],
+          "fields": "/^temperatureF$/",
+          "values": false
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "9.5.2",
+      "targets": [
+        {
+          "datasource": {
+            "type": "grafana-mongodb-opensource-datasource",
+            "uid": "${DataSource}"
+          },
+          "rawQuery": true,
+          "refId": "A",
+          "target": "db.weather_rack.aggregate(\n[\n    {\n        \"$match\": {\n            \"label\": \"${target}\",\n        }\n    },\n    {\n        \"$group\": {\n            \"_id\": \"$time\",\n            \"temp\": {\n                \"$avg\":\"$temperature\"\n            },\n            \"time\": {\n                \"$first\": \"$time\"\n            }\n        }\n    },\n    {\n        // Transform 'time' from a string to a date\n        \"$addFields\": {\n            \"time\": {\n                \"$dateFromString\": {\n                    \"dateString\": \"$time\"\n                }\n            }\n        }\n    },\n    {\n        \"$match\": {\n            \"time\": {\n                \"$gte\": new Date(\"${__from:date:iso}\"),\n                \"$lte\": new Date(\"${__to:date:iso}\")\n            }\n        }\n    },\n    {\n        \"$sort\": {\n            \"time\": -1\n        }\n    },\n    {\n        \"$addFields\": {\n        \"temperatureF\": {\n            \"$add\": [\n              { \"$multiply\": [ \"$temp\", 9/5 ] },\n              32\n            ]\n          }\n        }\n    },\n    // Project the fields we want to keep\n    {\n        \"$project\": {\n            \"_id\": 0,\n            \"temperatureF\": 1,\n            \"time\": 1,\n        }\n    }\n]\n)",
+          "type": "timeserie"
+        }
+      ],
+      "title": "Current (F)",
+      "transparent": true,
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "grafana-mongodb-opensource-datasource",
+        "uid": "${DataSource}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "decimals": 0,
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "semi-dark-purple",
+                "value": 4.4
+              },
+              {
+                "color": "semi-dark-blue",
+                "value": 10
+              },
+              {
+                "color": "semi-dark-green",
+                "value": 15.5
+              },
+              {
+                "color": "#EAB839",
+                "value": 21
+              },
+              {
+                "color": "#EF843C",
+                "value": 26.6
+              },
+              {
+                "color": "red",
+                "value": 32.2
+              },
+              {
+                "color": "dark-red",
+                "value": 37.7
+              }
+            ]
+          },
+          "unit": "celsius"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 3,
+        "x": 3,
+        "y": 13
+      },
+      "id": 2,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "firstNotNull"
+          ],
+          "fields": "/^temperature$/",
+          "values": false
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "9.5.2",
+      "targets": [
+        {
+          "datasource": {
+            "type": "grafana-mongodb-opensource-datasource",
+            "uid": "${DataSource}"
+          },
+          "rawQuery": true,
+          "refId": "A",
+          "target": "db.weather_rack.aggregate(\n    [\n        {\n            \"$match\": {\n                \"label\": \"${target}\",\n            }\n        },\n        {\n            // Transform 'time' from a string to a date\n            \"$addFields\": {\n                \"time\": {\n                    \"$dateFromString\": {\n                        \"dateString\": \"$time\"\n                    }\n                }\n            }\n        },\n        {\n            \"$match\": {\n                \"time\": {\n                    \"$gte\": new Date(\"${__from:date:iso}\"),\n                    \"$lte\": new Date(\"${__to:date:iso}\")\n                }\n            }\n        },\n        {\n            \"$sort\": {\n                \"time\": -1\n            }\n        },\n        // Project the fields we want to keep\n        {\n            \"$project\": {\n                \"_id\": \"$time\",\n                \"temperature\": 1,\n            }\n        }\n    ]\n    )",
+          "type": "timeserie"
+        }
+      ],
+      "title": "Current (C)",
+      "transparent": true,
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "grafana-mongodb-opensource-datasource",
+        "uid": "${DataSource}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "continuous-YlBl"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "text",
+                "value": null
+              }
+            ]
+          },
+          "unit": "humidity"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 3,
+        "x": 6,
+        "y": 13
+      },
+      "id": 8,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "firstNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "9.5.2",
+      "targets": [
+        {
+          "datasource": {
+            "type": "grafana-mongodb-opensource-datasource",
+            "uid": "${DataSource}"
+          },
+          "rawQuery": true,
+          "refId": "A",
+          "target": "db.weather_rack.aggregate(\n[\n    {\n        \"$match\": {\n            \"label\": \"${target}\",\n        }\n    },\n    {\n        \"$group\": {\n            \"_id\": \"$time\",\n            \"time\": {\n                \"$first\": \"$time\"\n            },\n            \"humidity\": {\n                \"$avg\":\"$humidity\"\n            },\n        }\n    },\n    {\n        // Transform 'time' from a string to a date\n        \"$addFields\": {\n            \"time\": {\n                \"$dateFromString\": {\n                    \"dateString\": \"$time\"\n                }\n            }\n        }\n    },\n    {\n        \"$match\": {\n            \"time\": {\n                \"$gte\": new Date(\"${__from:date:iso}\"),\n                \"$lte\": new Date(\"${__to:date:iso}\")\n            }\n        }\n    },\n    {\n        \"$sort\": {\n            \"time\": -1\n        }\n    },\n    \n    // Project the fields we want to keep\n    {\n        \"$project\": {\n            \"_id\": 0,\n            \"time\": 1,\n            \"humidity\": 1,\n        }\n    }\n]\n)",
+          "type": "timeserie"
+        }
+      ],
+      "title": "Humidity",
+      "transparent": true,
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "grafana-mongodb-opensource-datasource",
+        "uid": "${DataSource}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "light-blue",
+                "value": null
+              }
+            ]
+          },
+          "unit": "lengthin"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 3,
+        "x": 9,
+        "y": 13
+      },
+      "id": 25,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "firstNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "9.5.2",
+      "targets": [
+        {
+          "datasource": {
+            "type": "grafana-mongodb-opensource-datasource",
+            "uid": "${DataSource}"
+          },
+          "rawQuery": true,
+          "refId": "A",
+          "target": "db.weather_rack.aggregate(\n    [\n        {\n            \"$match\": {\n                \"label\": \"${target}\",\n            }\n        },\n        {\n            \"$group\": {\n                \"_id\": \"$time\",\n                \"time\": {\n                    \"$first\": \"$time\"\n                },\n                \"rain\": {\n                    \"$avg\": \"$cumulativerain\"\n                },\n            }\n        },\n        {\n            // Transform 'time' from a string to a date\n            \"$addFields\": {\n                \"time\": {\n                    \"$dateFromString\": {\n                        \"dateString\": \"$time\"\n                    }\n                }\n            }\n        },\n        {\n            \"$match\": {\n                \"time\": {\n                    \"$gte\": new Date(\"${__from:date:iso}\"),\n                    \"$lte\": new Date(\"${__to:date:iso}\")\n                }\n            }\n        },\n        {\n            \"$sort\": {\n                \"time\": -1\n            }\n        },\n        {\n            \"$addFields\": {\n                \"rainIn\": {\n                    \"$divide\": [\"$rain\",25.4]\n                }\n            }\n        },\n        {\n            \"$limit\": 1\n        },\n        {\n            \"$project\": {\n                \"_id\": 0,\n                \"rainIn\": 1,\n            }\n        }\n    ])",
+          "type": "timeserie"
+        }
+      ],
+      "title": "Cumulative Rain",
+      "transparent": true,
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "grafana-mongodb-opensource-datasource",
+        "uid": "a9ca6408-ff14-4fbc-b061-795f3dd6217f"
+      },
+      "gridPos": {
+        "h": 10,
+        "w": 4,
+        "x": 12,
+        "y": 13
+      },
+      "id": 26,
+      "options": {
+        "code": {
+          "language": "typescript",
+          "showLineNumbers": false,
+          "showMiniMap": false
+        },
+        "content": "<img src=\"http://ec2-44-229-131-224.us-west-2.compute.amazonaws.com:8080/$target.jpg\" width=\"100%\">",
+        "mode": "html"
+      },
+      "pluginVersion": "9.5.2",
+      "title": "Station: $target",
+      "type": "text"
+    },
+    {
+      "datasource": {
+        "type": "grafana-mongodb-opensource-datasource",
+        "uid": "${DataSource}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [
+            {
+              "options": {
+                "match": "true",
+                "result": {
+                  "color": "dark-red",
+                  "index": 0,
+                  "text": "Low Battery!"
+                }
+              },
+              "type": "special"
+            },
+            {
+              "options": {
+                "match": "false",
+                "result": {
+                  "color": "green",
+                  "index": 1,
+                  "text": "Battery OK"
+                }
+              },
+              "type": "special"
+            }
+          ],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 2,
+        "x": 16,
+        "y": 13
+      },
+      "id": 7,
+      "options": {
+        "colorMode": "background_solid",
+        "graphMode": "none",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "first"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "name"
+      },
+      "pluginVersion": "9.5.2",
+      "targets": [
+        {
+          "datasource": {
+            "type": "grafana-mongodb-opensource-datasource",
+            "uid": "${DataSource}"
+          },
+          "rawQuery": true,
+          "refId": "A",
+          "target": "db.weather_rack.aggregate(\n[\n    {\n        \"$match\": {\n            \"label\": \"${target}\",\n        }\n    },\n    {\n        \"$group\": {\n            \"_id\": \"$time\",\n            \"⚡\": {\n                \"$avg\":\"$batterylow\"\n            },\n            \"time\": {\n                \"$first\": \"$time\"\n            }\n        }\n    },\n    {\n        // Transform 'time' from a string to a date\n        \"$addFields\": {\n            \"time\": {\n                \"$dateFromString\": {\n                    \"dateString\": \"$time\"\n                }\n            }\n        }\n    },\n    {\n        \"$match\": {\n            \"time\": {\n                \"$gte\": new Date(\"${__from:date:iso}\"),\n                \"$lte\": new Date(\"${__to:date:iso}\")\n            }\n        }\n    },\n    {\n        \"$sort\": {\n            \"time\": -1\n        }\n    },\n    \n    // Project the fields we want to keep\n    {\n        \"$project\": {\n            \"_id\": 0,\n            \"time\": 1,\n            \"⚡\": \"$⚡\"\n        }\n    }\n]\n)",
+          "type": "timeserie"
+        }
+      ],
+      "title": "Battery",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "grafana-mongodb-opensource-datasource",
+        "uid": "${DataSource}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [
+            {
+              "options": {
+                "from": 0,
+                "result": {
+                  "index": 0,
+                  "text": "↑"
+                },
+                "to": 20
+              },
+              "type": "range"
+            },
+            {
+              "options": {
+                "from": 20,
+                "result": {
+                  "index": 1,
+                  "text": "↗"
+                },
+                "to": 70
+              },
+              "type": "range"
+            },
+            {
+              "options": {
+                "from": 70,
+                "result": {
+                  "index": 2,
+                  "text": "→"
+                },
+                "to": 110
+              },
+              "type": "range"
+            },
+            {
+              "options": {
+                "from": 110,
+                "result": {
+                  "index": 3,
+                  "text": "↘"
+                },
+                "to": 160
+              },
+              "type": "range"
+            },
+            {
+              "options": {
+                "from": 160,
+                "result": {
+                  "index": 4,
+                  "text": "↓"
+                },
+                "to": 200
+              },
+              "type": "range"
+            },
+            {
+              "options": {
+                "from": 200,
+                "result": {
+                  "index": 5,
+                  "text": "↙"
+                },
+                "to": 250
+              },
+              "type": "range"
+            },
+            {
+              "options": {
+                "from": 250,
+                "result": {
+                  "index": 6,
+                  "text": "←"
+                },
+                "to": 290
+              },
+              "type": "range"
+            },
+            {
+              "options": {
+                "from": 290,
+                "result": {
+                  "index": 7,
+                  "text": "↖"
+                },
+                "to": 340
+              },
+              "type": "range"
+            },
+            {
+              "options": {
+                "from": 340,
+                "result": {
+                  "index": 8,
+                  "text": "↑"
+                },
+                "to": 360
+              },
+              "type": "range"
+            }
+          ],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "text",
+                "value": ""
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 6,
+        "w": 6,
+        "x": 18,
+        "y": 13
+      },
+      "id": 13,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "firstNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "9.5.2",
+      "targets": [
+        {
+          "datasource": {
+            "type": "grafana-mongodb-opensource-datasource",
+            "uid": "${DataSource}"
+          },
+          "rawQuery": true,
+          "refId": "A",
+          "target": "db.weather_rack.aggregate(\n[\n    {\n        \"$match\": {\n            \"label\": \"${target}\",\n        }\n    },\n    {\n        \"$group\": {\n            \"_id\": \"$time\",\n            \"time\": {\n                \"$first\": \"$time\"\n            },\n            \"windDir\": {\n                \"$avg\": \"$winddirection\"\n            },\n        }\n    },\n    {\n        // Transform 'time' from a string to a date\n        \"$addFields\": {\n            \"time\": {\n                \"$dateFromString\": {\n                    \"dateString\": \"$time\"\n                }\n            }\n        }\n    },\n    {\n        \"$match\": {\n            \"time\": {\n                \"$gte\": new Date(\"${__from:date:iso}\"),\n                \"$lte\": new Date(\"${__to:date:iso}\")\n            }\n        }\n    },\n    {\n        \"$sort\": {\n            \"time\": -1\n        }\n    },\n    {\n        \"$limit\": 1\n    },\n    {\n        \"$project\": {\n            \"_id\": 0,\n            \"windDir\": 1,\n        }\n    }\n])",
+          "type": "timeserie"
+        }
+      ],
+      "title": "Wind Direction",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "grafana-mongodb-opensource-datasource",
+        "uid": "${DataSource}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "decimals": 0,
+          "mappings": [],
+          "max": 12,
+          "min": 0,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "yellow",
+                "value": 3
+              },
+              {
+                "color": "orange",
+                "value": 6
+              },
+              {
+                "color": "red",
+                "value": 8
+              },
+              {
+                "color": "purple",
+                "value": 11
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 3,
+        "x": 0,
+        "y": 18
+      },
+      "id": 10,
+      "links": [
+        {
+          "targetBlank": true,
+          "title": "UV Index Scale",
+          "url": "https://www.epa.gov/sunsafety/uv-index-scale-0"
+        }
+      ],
+      "options": {
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "firstNotNull"
+          ],
+          "fields": "/^uv$/",
+          "values": false
+        },
+        "showThresholdLabels": false,
+        "showThresholdMarkers": true,
+        "text": {}
+      },
+      "pluginVersion": "9.5.2",
+      "targets": [
+        {
+          "datasource": {
+            "type": "grafana-mongodb-opensource-datasource",
+            "uid": "${DataSource}"
+          },
+          "rawQuery": true,
+          "refId": "A",
+          "target": "db.weather_rack.aggregate(\n[\n    {\n        \"$match\": {\n            \"label\": \"${target}\",\n        }\n    },\n    {\n        \"$group\": {\n            \"_id\": \"$time\",\n            \"time\": {\n                \"$first\": \"$time\"\n            },\n            \"uv\": {\n                \"$avg\":\"$uv\"\n            },\n        }\n    },\n    {\n        // Transform 'time' from a string to a date\n        \"$addFields\": {\n            \"time\": {\n                \"$dateFromString\": {\n                    \"dateString\": \"$time\"\n                }\n            }\n        }\n    },\n    {\n        \"$match\": {\n            \"time\": {\n                \"$gte\": new Date(\"${__from:date:iso}\"),\n                \"$lte\": new Date(\"${__to:date:iso}\")\n            }\n        }\n    },\n    {\n        \"$sort\": {\n            \"time\": -1\n        }\n    },\n    \n    // Project the fields we want to keep\n    {\n        \"$project\": {\n            \"_id\": 0,\n            \"time\": 1,\n            \"uv\": 1,\n        }\n    }\n]\n)",
+          "type": "timeserie"
+        }
+      ],
+      "title": "UV Index",
+      "transparent": true,
+      "type": "gauge"
+    },
+    {
+      "datasource": {
+        "type": "grafana-mongodb-opensource-datasource",
+        "uid": "${DataSource}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "continuous-BlYlRd"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "yellow",
+                "value": null
+              }
+            ]
+          },
+          "unit": "lux"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 3,
+        "x": 3,
+        "y": 18
+      },
+      "id": 12,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "firstNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "9.5.2",
+      "targets": [
+        {
+          "datasource": {
+            "type": "grafana-mongodb-opensource-datasource",
+            "uid": "${DataSource}"
+          },
+          "rawQuery": true,
+          "refId": "A",
+          "target": "db.weather_rack.aggregate(\n[\n    {\n        \"$match\": {\n            \"label\": \"${target}\",\n        }\n    },\n    {\n        \"$group\": {\n            \"_id\": \"$time\",\n            \"time\": {\n                \"$first\": \"$time\"\n            },\n            \"lux\": {\n                \"$avg\":\"$light\"\n            },\n        }\n    },\n    {\n        // Transform 'time' from a string to a date\n        \"$addFields\": {\n            \"time\": {\n                \"$dateFromString\": {\n                    \"dateString\": \"$time\"\n                }\n            }\n        }\n    },\n    {\n        \"$match\": {\n            \"time\": {\n                \"$gte\": new Date(\"${__from:date:iso}\"),\n                \"$lte\": new Date(\"${__to:date:iso}\")\n            }\n        }\n    },\n    {\n        \"$sort\": {\n            \"time\": -1\n        }\n    },\n    \n    // Project the fields we want to keep\n    {\n        \"$project\": {\n            \"_id\": 0,\n            \"time\": 1,\n            \"lux\": 1,\n        }\n    }\n]\n)",
+          "type": "timeserie"
+        }
+      ],
+      "title": "Light",
+      "transparent": true,
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "grafana-mongodb-opensource-datasource",
+        "uid": "a9ca6408-ff14-4fbc-b061-795f3dd6217f"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "custom": {
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 6,
+        "x": 6,
+        "y": 18
+      },
+      "id": 21,
+      "options": {
+        "basemap": {
+          "config": {
+            "server": "world-imagery"
+          },
+          "name": "Layer 0",
+          "opacity": 1,
+          "type": "esri-xyz"
+        },
+        "controls": {
+          "mouseWheelZoom": true,
+          "showAttribution": true,
+          "showDebug": false,
+          "showMeasure": false,
+          "showScale": true,
+          "showZoom": true
+        },
+        "layers": [
+          {
+            "config": {
+              "showLegend": false,
+              "style": {
+                "color": {
+                  "fixed": "orange"
+                },
+                "opacity": 1,
+                "rotation": {
+                  "fixed": 0,
+                  "max": 360,
+                  "min": -360,
+                  "mode": "mod"
+                },
+                "size": {
+                  "fixed": 5,
+                  "max": 15,
+                  "min": 2
+                },
+                "symbol": {
+                  "fixed": "img/icons/marker/circle.svg",
+                  "mode": "fixed"
+                },
+                "text": {
+                  "field": "",
+                  "fixed": "",
+                  "mode": "fixed"
+                },
+                "textConfig": {
+                  "fontSize": 12,
+                  "offsetX": 0,
+                  "offsetY": 0,
+                  "textAlign": "center",
+                  "textBaseline": "middle"
+                }
+              }
+            },
+            "location": {
+              "mode": "auto"
+            },
+            "name": "WeatherRack",
+            "tooltip": true,
+            "type": "markers"
+          }
+        ],
+        "tooltip": {
+          "mode": "details"
+        },
+        "view": {
+          "allLayers": true,
+          "id": "fit",
+          "lastOnly": false,
+          "lat": 48.3207733,
+          "layer": "Layer 1",
+          "lon": -116.55547805555555,
+          "zoom": 17
+        }
+      },
+      "pluginVersion": "9.5.2",
+      "targets": [
+        {
+          "datasource": {
+            "type": "grafana-mongodb-opensource-datasource",
+            "uid": "a9ca6408-ff14-4fbc-b061-795f3dd6217f"
+          },
+          "rawQuery": true,
+          "refId": "A",
+          "target": "db.weather_rack_instances.aggregate(\n[\n    {\n        \"$match\": {\n            \"instance_unique_identifier\": \"${target}\",\n        }\n    },\n]\n)",
+          "type": "timeserie"
+        }
+      ],
+      "title": "$target Location",
+      "type": "geomap"
+    },
+    {
+      "datasource": {
+        "type": "grafana-mongodb-opensource-datasource",
+        "uid": "${DataSource}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "text",
+                "value": null
+              }
+            ]
+          },
+          "unit": "velocitymph"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 3,
+        "x": 18,
+        "y": 19
+      },
+      "id": 36,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "firstNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "9.5.2",
+      "targets": [
+        {
+          "datasource": {
+            "type": "grafana-mongodb-opensource-datasource",
+            "uid": "${DataSource}"
+          },
+          "rawQuery": true,
+          "refId": "A",
+          "target": "db.weather_rack.aggregate(\n    [\n        {\n            \"$match\": {\n                \"label\": \"${target}\",\n            }\n        },\n        {\n            \"$group\": {\n                \"_id\": \"$time\",\n                \"time\": {\n                    \"$first\": \"$time\"\n                },\n                \"wind\": {\n                    \"$avg\": \"$avewindspeed\"\n                },\n            }\n        },\n        {\n            // Transform 'time' from a string to a date\n            \"$addFields\": {\n                \"time\": {\n                    \"$dateFromString\": {\n                        \"dateString\": \"$time\"\n                    }\n                }\n            }\n        },\n        {\n            \"$match\": {\n                \"time\": {\n                    \"$gte\": new Date(\"${__from:date:iso}\"),\n                    \"$lte\": new Date(\"${__to:date:iso}\")\n                }\n            }\n        },\n        {\n            \"$sort\": {\n                \"time\": -1\n            }\n        },\n        {\n            \"$limit\": 1\n        },\n        {\n            $addFields: {\n              wind_mph: { $multiply: [ \"$wind\", 2.236936 ] }\n            }\n        },\n        {\n            \"$project\": {\n                \"_id\": 0,\n                \"wind_mph\": 1,\n            }\n        }\n    ])",
+          "type": "timeserie"
+        }
+      ],
+      "title": "Average Windspeed",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "grafana-mongodb-opensource-datasource",
+        "uid": "${DataSource}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "text",
+                "value": null
+              }
+            ]
+          },
+          "unit": "velocitymph"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 3,
+        "x": 21,
+        "y": 19
+      },
+      "id": 15,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "firstNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "9.5.2",
+      "targets": [
+        {
+          "datasource": {
+            "type": "grafana-mongodb-opensource-datasource",
+            "uid": "${DataSource}"
+          },
+          "rawQuery": true,
+          "refId": "A",
+          "target": "db.weather_rack.aggregate(\n        [\n            {\n                \"$match\": {\n                    \"label\": \"${target}\",\n                }\n            },\n            {\n                \"$group\": {\n                    \"_id\": \"$time\",\n                    \"time\": {\n                        \"$first\": \"$time\"\n                    },\n                    \"wind\": {\n                        \"$avg\": \"$gustwindspeed\"\n                    },\n                }\n            },\n            {\n                // Transform 'time' from a string to a date\n                \"$addFields\": {\n                    \"time\": {\n                        \"$dateFromString\": {\n                            \"dateString\": \"$time\"\n                        }\n                    }\n                }\n            },\n            {\n                \"$match\": {\n                    \"time\": {\n                        \"$gte\": new Date(\"${__from:date:iso}\"),\n                        \"$lte\": new Date(\"${__to:date:iso}\")\n                    }\n                }\n            },\n            {\n                \"$sort\": {\n                    \"time\": -1\n                }\n            },\n            {\n                \"$limit\": 1\n            },\n            {\n                $addFields: {\n                  wind_mph: { $multiply: [ \"$wind\", 2.236936 ] }\n                }\n            },\n            {\n                \"$project\": {\n                    \"_id\": 0,\n                    \"wind_mph\": 1,\n                }\n            }\n        ])",
+          "type": "timeserie"
+        }
+      ],
+      "title": "Latest Wind Gust",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "grafana-mongodb-opensource-datasource",
+        "uid": "${DataSource}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "text",
+                "value": null
+              }
+            ]
+          },
+          "unit": "pressurekpa"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 2,
+        "x": 16,
+        "y": 21
+      },
+      "id": 38,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "firstNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "9.5.2",
+      "targets": [
+        {
+          "datasource": {
+            "type": "grafana-mongodb-opensource-datasource",
+            "uid": "${DataSource}"
+          },
+          "rawQuery": true,
+          "refId": "A",
+          "target": "db.bmp280.aggregate(\n    [\n        {\n            \"$group\": {\n                \"_id\": \"$time\",\n                \"time\": {\n                    \"$first\": \"$time\"\n                },\n                \"pressure\": {\n                    \"$avg\": \"$BarometricPressure\"\n                },\n            }\n        },\n        {\n            // Transform 'time' from a string to a date\n            \"$addFields\": {\n                \"time\": {\n                    \"$dateFromString\": {\n                        \"dateString\": \"$time\"\n                    }\n                }\n            }\n        },\n        {\n            \"$match\": {\n                \"time\": {\n                    \"$gte\": new Date(\"${__from:date:iso}\"),\n                    \"$lte\": new Date(\"${__to:date:iso}\")\n                }\n            }\n        },\n        {\n            \"$sort\": {\n                \"time\": -1\n            }\n        },\n        {\n            \"$limit\": 1\n        },\n        {\n            \"$project\": {\n                \"_id\": 0,\n                \"pressure\": 1,\n            }\n        }\n    ])",
+          "type": "timeserie"
+        }
+      ],
+      "title": "Barometric Pressure",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "grafana-mongodb-opensource-datasource",
+        "uid": "a9ca6408-ff14-4fbc-b061-795f3dd6217f"
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 3,
+        "x": 0,
+        "y": 23
+      },
+      "id": 32,
+      "options": {
+        "code": {
+          "language": "typescript",
+          "showLineNumbers": false,
+          "showMiniMap": false
+        },
+        "content": "<img src=\"http://ec2-44-229-131-224.us-west-2.compute.amazonaws.com:8080/CSlogo.png\" width=\"100%\">\r\n<!--<img src=\"http://ec2-44-229-131-224.us-west-2.compute.amazonaws.com:8080/SCARECRO.png\" width=\"100%\">-->",
+        "mode": "html"
+      },
+      "pluginVersion": "9.5.2",
+      "title": " ",
+      "transparent": true,
+      "type": "text"
+    },
+    {
+      "datasource": {
+        "type": "grafana-mongodb-opensource-datasource",
+        "uid": "a9ca6408-ff14-4fbc-b061-795f3dd6217f"
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 2,
+        "x": 3,
+        "y": 23
+      },
+      "id": 33,
+      "options": {
+        "code": {
+          "language": "typescript",
+          "showLineNumbers": false,
+          "showMiniMap": false
+        },
+        "content": "<!--<img src=\"http://ec2-44-229-131-224.us-west-2.compute.amazonaws.com:8080/CSlogo.png\" width=\"100%\">-->\r\n<img src=\"http://ec2-44-229-131-224.us-west-2.compute.amazonaws.com:8080/SCARECRO2.png\" width=\"100%\">",
+        "mode": "html"
+      },
+      "pluginVersion": "9.5.2",
+      "title": " ",
+      "transparent": true,
+      "type": "text"
+    },
+    {
+      "datasource": {
+        "type": "grafana-mongodb-opensource-datasource",
+        "uid": "${DataSource}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "fixedColor": "text",
+            "mode": "fixed"
+          },
+          "decimals": 0,
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "super-light-orange",
+                "value": null
+              }
+            ]
+          },
+          "unit": "celsius"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 3,
+        "x": 21,
+        "y": 23
+      },
+      "id": 35,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "firstNotNull"
+          ],
+          "fields": "/^time$/",
+          "values": false
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "9.5.2",
+      "targets": [
+        {
+          "datasource": {
+            "type": "grafana-mongodb-opensource-datasource",
+            "uid": "${DataSource}"
+          },
+          "rawQuery": true,
+          "refId": "A",
+          "target": "db.weather_rack.aggregate(\n    [\n        {\n            \"$match\": {\n                \"label\": \"${target}\",\n            }\n        },\n        {\n            // Transform 'time' from a string to a date\n            \"$addFields\": {\n                \"time\": {\n                    \"$dateFromString\": {\n                        \"dateString\": \"$time\"\n                    }\n                }\n            }\n        },\n        {\n            \"$match\": {\n                \"time\": {\n                    \"$gte\": new Date(\"${__from:date:iso}\"),\n                    \"$lte\": new Date(\"${__to:date:iso}\")\n                }\n            }\n        },\n        {\n            \"$sort\": {\n                \"time\": -1\n            }\n        },\n        // Project the fields we want to keep\n        {\n            \"$project\": {\n                \"_id\": \"$time\",\n                \"time\": 1,\n            }\n        }\n    ]\n    )",
+          "type": "timeserie"
+        }
+      ],
+      "title": "Latest Reading",
+      "transparent": true,
+      "type": "stat"
+    },
+    {
+      "collapsed": false,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 27
+      },
+      "id": 34,
+      "panels": [],
+      "title": "Metric Measurements",
+      "type": "row"
+    },
+    {
+      "datasource": {
+        "type": "grafana-mongodb-opensource-datasource",
+        "uid": "${DataSource}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "light-blue",
+                "value": null
+              }
+            ]
+          },
+          "unit": "lengthmm"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 4,
+        "x": 0,
+        "y": 28
+      },
+      "id": 16,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "firstNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "9.5.2",
+      "targets": [
+        {
+          "datasource": {
+            "type": "grafana-mongodb-opensource-datasource",
+            "uid": "${DataSource}"
+          },
+          "rawQuery": true,
+          "refId": "A",
+          "target": "db.weather_rack.aggregate(\n[\n    {\n        \"$match\": {\n            \"label\": \"${target}\",\n        }\n    },\n    {\n        \"$group\": {\n            \"_id\": \"$time\",\n            \"time\": {\n                \"$first\": \"$time\"\n            },\n            \"rain\": {\n                \"$avg\": \"$cumulativerain\"\n            },\n        }\n    },\n    {\n        // Transform 'time' from a string to a date\n        \"$addFields\": {\n            \"time\": {\n                \"$dateFromString\": {\n                    \"dateString\": \"$time\"\n                }\n            }\n        }\n    },\n    {\n        \"$match\": {\n            \"time\": {\n                \"$gte\": new Date(\"${__from:date:iso}\"),\n                \"$lte\": new Date(\"${__to:date:iso}\")\n            }\n        }\n    },\n    {\n        \"$sort\": {\n            \"time\": -1\n        }\n    },\n    {\n        \"$limit\": 1\n    },\n    {\n        \"$project\": {\n            \"_id\": 0,\n            \"rain\": 1,\n        }\n    }\n])",
+          "type": "timeserie"
+        }
+      ],
+      "title": "Cumulative Rain",
+      "transparent": true,
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "grafana-mongodb-opensource-datasource",
+        "uid": "${DataSource}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "text",
+                "value": null
+              }
+            ]
+          },
+          "unit": "velocityms"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 3,
+        "x": 4,
+        "y": 28
+      },
+      "id": 14,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "firstNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "9.5.2",
+      "targets": [
+        {
+          "datasource": {
+            "type": "grafana-mongodb-opensource-datasource",
+            "uid": "${DataSource}"
+          },
+          "rawQuery": true,
+          "refId": "A",
+          "target": "db.weather_rack.aggregate(\n[\n    {\n        \"$match\": {\n            \"label\": \"${target}\",\n        }\n    },\n    {\n        \"$group\": {\n            \"_id\": \"$time\",\n            \"time\": {\n                \"$first\": \"$time\"\n            },\n            \"wind\": {\n                \"$avg\": \"$avewindspeed\"\n            },\n        }\n    },\n    {\n        // Transform 'time' from a string to a date\n        \"$addFields\": {\n            \"time\": {\n                \"$dateFromString\": {\n                    \"dateString\": \"$time\"\n                }\n            }\n        }\n    },\n    {\n        \"$match\": {\n            \"time\": {\n                \"$gte\": new Date(\"${__from:date:iso}\"),\n                \"$lte\": new Date(\"${__to:date:iso}\")\n            }\n        }\n    },\n    {\n        \"$sort\": {\n            \"time\": -1\n        }\n    },\n    {\n        \"$limit\": 1\n    },\n    {\n        \"$project\": {\n            \"_id\": 0,\n            \"wind\": 1,\n        }\n    }\n])",
+          "type": "timeserie"
+        }
+      ],
+      "title": "Average Windspeed",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "grafana-mongodb-opensource-datasource",
+        "uid": "${DataSource}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "text",
+                "value": null
+              }
+            ]
+          },
+          "unit": "velocityms"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 3,
+        "x": 7,
+        "y": 28
+      },
+      "id": 37,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "firstNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "9.5.2",
+      "targets": [
+        {
+          "datasource": {
+            "type": "grafana-mongodb-opensource-datasource",
+            "uid": "${DataSource}"
+          },
+          "rawQuery": true,
+          "refId": "A",
+          "target": "db.weather_rack.aggregate(\n[\n    {\n        \"$match\": {\n            \"label\": \"${target}\",\n        }\n    },\n    {\n        \"$group\": {\n            \"_id\": \"$time\",\n            \"time\": {\n                \"$first\": \"$time\"\n            },\n            \"wind\": {\n                \"$avg\": \"$gustwindspeed\"\n            },\n        }\n    },\n    {\n        // Transform 'time' from a string to a date\n        \"$addFields\": {\n            \"time\": {\n                \"$dateFromString\": {\n                    \"dateString\": \"$time\"\n                }\n            }\n        }\n    },\n    {\n        \"$match\": {\n            \"time\": {\n                \"$gte\": new Date(\"${__from:date:iso}\"),\n                \"$lte\": new Date(\"${__to:date:iso}\")\n            }\n        }\n    },\n    {\n        \"$sort\": {\n            \"time\": -1\n        }\n    },\n    {\n        \"$limit\": 1\n    },\n    {\n        \"$project\": {\n            \"_id\": 0,\n            \"wind\": 1,\n        }\n    }\n])",
+          "type": "timeserie"
+        }
+      ],
+      "title": "Latest Wind Gust",
+      "type": "stat"
+    }
+  ],
+  "refresh": "5m",
+  "schemaVersion": 38,
+  "style": "dark",
+  "tags": [],
+  "templating": {
+    "list": [
+      {
+        "current": {
+          "selected": false,
+          "text": "WR2_1",
+          "value": "WR2_1"
+        },
+        "datasource": {
+          "type": "grafana-mongodb-opensource-datasource",
+          "uid": "${DataSource}"
+        },
+        "definition": "db.weather_rack_instances.aggregate([\n            {\n                $group: { _id: \"$instance_unique_identifier\" }\n            }\n        ])",
+        "hide": 0,
+        "includeAll": false,
+        "label": "Sensor",
+        "multi": false,
+        "name": "target",
+        "options": [],
+        "query": "db.weather_rack_instances.aggregate([\n            {\n                $group: { _id: \"$instance_unique_identifier\" }\n            }\n        ])",
+        "refresh": 1,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 0,
+        "type": "query"
+      },
+      {
+        "current": {
+          "selected": false,
+          "text": "SOAC",
+          "value": "SOAC"
+        },
+        "hide": 2,
+        "includeAll": false,
+        "multi": false,
+        "name": "DataSource",
+        "options": [],
+        "query": "grafana-mongodb-opensource-datasource",
+        "queryValue": "",
+        "refresh": 1,
+        "regex": "",
+        "skipUrlSync": false,
+        "type": "datasource"
+      }
+    ]
+  },
+  "time": {
+    "from": "now-15m",
+    "to": "now"
+  },
+  "timepicker": {},
+  "timezone": "",
+  "title": "SOAC Dashboard",
+  "uid": "c7c8c1a9-9581-4c6f-87ca-c066e2626d1b",
+  "version": 76,
+  "weekStart": ""
+}

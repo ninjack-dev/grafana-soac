@@ -43,10 +43,3 @@ for bin in "$DIST_DIR"/gpx_mongodb_datasource_*; do
         chmod +x "$bin"
     fi
 done
-
-# Start docker compose (sudo on Linux)
-if [[ "$(uname -s)" == "Linux" ]]; then
-    sudo docker compose -f docker-compose.prod.yaml up -d
-else
-    docker compose -f docker-compose.prod.yaml up -d
-fi

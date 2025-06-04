@@ -1,0 +1,4 @@
+# The location of the MongoDB plugin
+mongodb-datasource/ 
+# The bind mount location; we don't want to back up any of the files in here, as they contain sensitive info; for backups, rely on the exported JSON
+grafana-storage/
