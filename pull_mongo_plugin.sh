@@ -37,6 +37,8 @@ if [[ -d "haohanyang-mongodb-datasource" ]]; then
     mv "haohanyang-mongodb-datasource" "$DIST_DIR"
 fi
 
+rm "$DIST_DIR/*darwin*" "$DIST_DIR/*arm*" "$DIST_DIR/*.exe" # Remove all executables that aren't x86 Linux
+
 # Grant execute permissions to matching binaries
 for bin in "$DIST_DIR"/gpx_mongodb_datasource_*; do
     if [[ -f "$bin" ]]; then
