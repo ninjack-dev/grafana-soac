@@ -17,6 +17,7 @@ We use [haohanyang/mongodb-datasource](https://github.com/haohanyang/mongodb-dat
 The script `pull_mongo_plugin.sh` will pull the latest built version of the plugin binaries for use with the Docker setup. **Note: It requires `jq` for parsing the `curl` request and `unzip` for handling the release GitHub release package.** If these dependencies are unavailable for whatever reason, manually download [the latest release of the plugin](https://github.com/haohanyang/mongodb-datasource/releases/latest) and unzip the contents to a new `mongodb-datasource` directory.
 
 ### Adding New Panels
+#### MongoDB
 The MongoDB plugin adds the following variables for use in aggregation pipelines:
 - `__from` - The beginning of the time range provided by the Grafana UI. Must be converted to a long before being converted to a [`date`](https://www.mongodb.com/docs/manual/reference/bson-types/#std-label-document-bson-type-date) BSON type; see the example.
 - `__to` - The end of the time range provided by the Grafana UI. Must be converted to a long before being converted to a [`date`](https://www.mongodb.com/docs/manual/reference/bson-types/#std-label-document-bson-type-date) BSON type; see the example.
@@ -48,6 +49,13 @@ To take advantage of the date range, the `time` field associated with each docum
 ```
 
 Feel free to examine any of the panels in the UI itself for more in-depth examples.
+#### Images
+To add a new image, first put it in `./grafana-public/img`; this is bind mounted to `/var/lib/grafana/public/img/`, and can then be accessed in a Text panel (in HTML mode) with:
+```html
+<img src=/public/img/your-image.ext>
+```
+It is **not recommended** to track the images with Git; they will cause storage limit issues in EC2 due to the duplication inherent to Git tracking.
+
 ### Adding New Variables
 Under **Home** -> **Dashboards** -> **<Dashboard Name>** -> **Settings** -> **Variables**, new variables which rely on the MongoDB database can be added for use in the user interface, e.g. to select a sensor. They must be added via aggregation pipelines which add the field `value` in an [`$addFields` stage](https://www.mongodb.com/docs/manual/reference/operator/aggregation/addFields/).
 ```json
