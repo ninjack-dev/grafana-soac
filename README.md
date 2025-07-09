@@ -57,20 +57,20 @@ To add a new image, first put it in `./grafana-public/img`; this is bind mounted
 It is **not recommended** to track the images with Git; they will cause storage limit issues in EC2 due to the duplication inherent to Git tracking.
 
 ### Adding New Variables
-Under **Home** -> **Dashboards** -> **<Dashboard Name>** -> **Settings** -> **Variables**, new variables which rely on the MongoDB database can be added for use in the user interface, e.g. to select a sensor. They must be added via aggregation pipelines which add the field `value` in an [`$addFields` stage](https://www.mongodb.com/docs/manual/reference/operator/aggregation/addFields/).
+Under **Home** -> **Dashboards** -> **<Dashboard Name\>** -> **Settings** -> **Variables**, new variables which rely on the MongoDB database can be added for use in the user interface, e.g. to select a sensor. They can be used in aggregation pipelines which add the field `value` in an [`$addFields` stage](https://www.mongodb.com/docs/manual/reference/operator/aggregation/addFields/).
 ```json
 [
   ...
   {
     "$addFields": {
-      "value": "$<your value>"
+      "value": "$<name of your variable>"
     }
   }
 ]
 ```
 
 ### Migration
-The original plugin used JavaScript in a similar vein to the [Mongo Shell](https://www.mongodb.com/docs/mongodb-shell/); the queries passed to the `db.<database.aggregate()` call were adapted nearly 1:1 to the new JSON-only format.
+The original plugin used JavaScript in a similar vein to the [Mongo Shell](https://www.mongodb.com/docs/mongodb-shell/); the queries passed to the `db.<database>.aggregate()` call were adapted nearly 1:1 to the new JSON-only format.
 
 The following JQ snippet was used to remove legacy fields from the panels after they were migrated to the new MongoDB plugin.
 ```jq
