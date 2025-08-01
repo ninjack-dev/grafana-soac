@@ -1,11 +1,8 @@
 # grafana-soac
 ## Deployment
-First, run `./pull_mongo_plugin.sh` to download the latest version of the Grafana MongoDB plugin. If this fails, see [MongoDB Plugin](#mongodb-plugin).
-
-Then, simply run
-```
-docker compose up -d
-```
+1) Run `./pull_mongo_plugin.sh` to download the latest version of the Grafana MongoDB plugin. If this fails, see [MongoDB Plugin](#mongodb-plugin).
+2) Run `mkdir grafana-storage user-images` as the base user (with UID `1000`); the container's user uses this UID, so the ownership must match. If your UID is different, modify the `user: '<uid>'` field in `compose.yml`.
+3) Run `docker compose up -d`, and ensure the container is running with `docker compose logs grafana`.
 
 When initializing the instance for the first time (i.e. when the `grafana.db` file hasn't been migrated), navigate to **Connections** -> **Data Sources**, click **Add New Source** and search for the `MongoDB` plugin; from there, assuming you've been provided a MongoDB connection string, fill out the relevant fields, set the name to `mongodb-datasource`, then **Save and Test**. After that, navigate to `Dashboards`, click **Import** in the upper-righthand corner, then select **Import** in the dropdown menu; from there, you can upload the relevant `SOAC Dashboard.json` from `./dashboard-backups/`.
 
@@ -14,7 +11,7 @@ If you make any changes, make sure to export the dashboard as JSON by clicking *
 ## MongoDB Plugin
 We use [haohanyang/mongodb-datasource](https://github.com/haohanyang/mongodb-datasource/) to query the Sandpoint MongoDB; this plugin was an update from the original [JamesOsgood/mongodb-grafana](https://github.com/JamesOsgood/mongodb-grafana).
 
-The script `pull_mongo_plugin.sh` will pull the latest built version of the plugin binaries for use with the Docker setup. **Note: It requires `jq` for parsing the `curl` request and `unzip` for handling the release GitHub release package.** If these dependencies are unavailable for whatever reason, manually download [the latest release of the plugin](https://github.com/haohanyang/mongodb-datasource/releases/latest) and unzip the contents to a new `mongodb-datasource` directory.
+The script `pull_mongo_plugin.sh` will pull the latest built version of the plugin binaries for use with the Docker setup. **Note: It requires `jq` for parsing the `curl` request and `unzip` for extracting the GitHub release package.** If these dependencies are unavailable for whatever reason, manually download [the latest release of the plugin](https://github.com/haohanyang/mongodb-datasource/releases/latest) and unzip the contents to a directory named `mongodb-datasource`.
 
 ### Adding New Panels
 #### MongoDB
